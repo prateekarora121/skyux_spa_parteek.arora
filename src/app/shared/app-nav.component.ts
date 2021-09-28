@@ -9,10 +9,10 @@ import {
 })
 export class AppNavComponent {
   public nav = [
-    // {
-    //   titleKey: 'app_nav_home',
-    //   path: '/'
-    // },
+    {
+      titleKey: 'app_nav_home',
+      path: '/'
+    },
     // {
     //   titleKey: 'About',
     //   path: '/about'
