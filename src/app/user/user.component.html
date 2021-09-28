@@ -1,0 +1,116 @@
+<app-nav>
+</app-nav>
+
+
+
+
+
+
+
+ <div class="form-style">
+  <form
+  novalidate
+  [formGroup]="myForm"
+   (ngSubmit)="onSubmit()">
+      <label for="form-group-first-input-example" class="sky-control-label">
+        First name
+      </label>
+      <input  formControlName="firstName"
+      class="sky-form-control" id="form-group-first-input-example" type="text">
+
+      <label for="form-group-second-input-example" class="sky-control-label">
+        Last name
+      </label>
+      <input  formControlName="lastName"
+      class="sky-form-control" id="form-group-second-input-example" type="text">
+
+    <label for="basic-input-with-label-example" class="sky-control-label">
+      Phone number
+    </label>
+    <input formControlName="number"
+    class="sky-form-control" id="basic-input-with-label-example" type="text" >
+
+
+
+
+  <sky-input-box>
+    <label
+      class="sky-control-label"
+      [for]="dateInput.id"
+    >
+      Date
+    </label>
+    <sky-datepicker>
+      <input
+        formControlName="dob"
+        id="dob"
+
+        skyDatepickerInput
+        skyId
+        type="text"
+        #dateInput="skyId"
+      />
+    </sky-datepicker>
+  </sky-input-box>
+
+
+
+
+<div
+class="sky-form-group"
+>
+<label
+  class="sky-control-label"
+  [for]="emailInput.id"
+>
+  Email address
+</label>
+<input
+  class="sky-form-control"
+  formControlName="email"
+  skyId
+  #emailInput="skyId"
+/>
+</div>
+
+
+<ng-container *ngIf="emailControl.errors && emailControl.touched">
+
+  <div *ngIf="emailControl.errors.required"
+    class="sky-error-label"
+  >
+    Email address is required.
+  </div>
+
+  <div *ngIf="emailControl.errors.skyEmail && emailControl.dirty"
+    class="sky-error-label"
+  >
+    Enter a valid email in the "joe@abc.com" format.
+  </div>
+
+</ng-container>
+
+
+
+
+
+    <label for="basic-input-with-label-example" class="sky-control-label">
+      Address
+    </label>
+    <input formControlName="address"
+    class="sky-form-control" id="basic-input-with-label-example" type="text"  >
+    <button [disabled]="!myForm.valid"
+      class="sky-btn sky-btn-default submit-btn"
+      type="submit"
+    >
+      Submit
+    </button>
+    <button style="margin-left: 9%;"
+      class="sky-btn sky-btn-default submit-btn"
+      type="button"
+      (click)="onCancel()"
+    >
+      Cancel
+    </button>
+  </form>
+  </div>
