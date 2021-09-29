@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
-import { UserService } from '../services/user.service';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'data-entry-grid-context-menu',
@@ -20,7 +20,6 @@ export class SkyDataEntryGridContextMenuComponent
   public refresh(): boolean {
     return false;
   }
-
   public actionClicked(action: any): void {
     this.userService.removeUser(this.params.data.id);
     alert('User deleted Successfully');

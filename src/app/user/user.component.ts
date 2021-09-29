@@ -9,7 +9,7 @@ import {
 import { Router } from '@angular/router';
 import { SkyValidators } from '@skyux/validation';
 import { UserModel } from '../model/user.model';
-import { UserService } from '../services/user.service';
+import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'my-user',

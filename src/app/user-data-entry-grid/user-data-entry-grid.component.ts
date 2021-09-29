@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
 import { SkyModalCloseArgs, SkyModalService } from '@skyux/modals';
 import { GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community';
-import { UserService } from '../services/user.service';
+import { UserService } from '../shared/services/user.service';
 import { SkyDataEntryGridContextMenuComponent } from './data-entry-grid-context-menu.component';
 import { SkyDataEntryGridEditModalContext } from './data-entry-grid-edit-modal-context';
 import { SkyDataEntryGridEditModalComponent } from './data-entry-grid-edit-modal.component';
@@ -88,7 +88,6 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
 
   public onGridReady(gridReadyEvent: GridReadyEvent): void {
     this.gridApi = gridReadyEvent.api;
-
     this.gridApi.sizeColumnsToFit();
   }
 
@@ -103,12 +102,10 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
       ariaDescribedBy: 'docs-edit-grid-modal-content',
       size: 'large'
     };
-
     const modalInstance = this.modalService.open(
       SkyDataEntryGridEditModalComponent,
       options
     );
-
     modalInstance.closed.subscribe((result: SkyModalCloseArgs) => {
       if (result.reason === 'cancel' || result.reason === 'close') {
         alert('Edits canceled!');
@@ -124,7 +121,6 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
     this.searchText = searchText;
     this.gridApi.setQuickFilter(searchText);
   }
-
   public onAddUser() {
     this.router.navigate(['user']);
   }

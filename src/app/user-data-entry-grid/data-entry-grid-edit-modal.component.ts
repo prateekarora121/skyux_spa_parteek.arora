@@ -73,7 +73,6 @@ export class SkyDataEntryGridEditModalComponent implements OnInit {
 
   public onGridReady(gridReadyEvent: GridReadyEvent): void {
     this.gridApi = gridReadyEvent.api;
-
     this.gridApi.sizeColumnsToFit();
   }
 }
