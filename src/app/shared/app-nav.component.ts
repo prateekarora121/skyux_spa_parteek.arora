@@ -13,14 +13,6 @@ export class AppNavComponent {
       titleKey: 'app_nav_home',
       path: '/'
     },
-    // {
-    //   titleKey: 'About',
-    //   path: '/about'
-    // },
-    // {
-    //   titleKey: 'User',
-    //   path: '/user'
-    // },
     {
       titleKey: 'User Grid',
       path: '/user-data-entry-grid'
