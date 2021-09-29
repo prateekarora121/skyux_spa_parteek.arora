@@ -5,35 +5,36 @@
   novalidate
   [formGroup]="myForm"
    (ngSubmit)="onSubmit()">
-      <label for="form-group-first-input-example" class="sky-control-label">
+      <label for="form-group-first-input-example" id="firstNameLabel" class="sky-control-label">
         First name
       </label>
       <input  formControlName="firstName"
-      class="sky-form-control" id="form-group-first-input-example" type="text">
+      class="sky-form-control" id="firstName" type="text">
 
-      <label for="form-group-second-input-example" class="sky-control-label">
+      <label for="form-group-second-input-example" id="lastNameLabel" class="sky-control-label">
         Last name
       </label>
       <input  formControlName="lastName"
-      class="sky-form-control" id="form-group-second-input-example" type="text">
+      class="sky-form-control" id="lastName" type="text">
 
-    <label for="basic-input-with-label-example" class="sky-control-label">
+    <label for="basic-input-with-label-example" id="numberLabel" class="sky-control-label">
       Phone number
     </label>
     <input formControlName="number"
-    class="sky-form-control" id="basic-input-with-label-example" type="text" >
+    class="sky-form-control" id="number" type="text" >
   <sky-input-box>
     <label
-      class="sky-control-label"
+      class="sky-control-label dobLabel"
       [for]="dateInput.id"
     >
       Date
     </label>
-    <sky-datepicker>
+    <sky-datepicker
+    id="dob1"
+    >
       <input
+      class="dob"
         formControlName="dob"
-        id="dob"
-
         skyDatepickerInput
         skyId
         type="text"
@@ -49,13 +50,14 @@
 class="sky-form-group"
 >
 <label
-  class="sky-control-label"
+  class="sky-control-label emailLabel"
   [for]="emailInput.id"
 >
   Email address
 </label>
 <input
-  class="sky-form-control"
+  id="email"
+  class="sky-form-control email"
   formControlName="email"
   skyId
   #emailInput="skyId"
@@ -78,20 +80,22 @@ class="sky-form-group"
   </div>
 
 </ng-container>
-    <label for="basic-input-with-label-example" class="sky-control-label">
+    <label  for="basic-input-with-label-example" id="addressLabel" class="sky-control-label">
       Address
     </label>
     <input formControlName="address"
-    class="sky-form-control" id="basic-input-with-label-example" type="text"  >
+    class="sky-form-control" id="address" type="text"  >
     <button [disabled]="!myForm.valid"
       class="sky-btn sky-btn-default submit-btn"
       type="submit"
+      id="submit"
     >
       Submit
     </button>
     <button style="margin-left: 9%;"
       class="sky-btn sky-btn-default submit-btn"
       type="button"
+      id="cancel"
       (click)="onCancel()"
     >
       Cancel

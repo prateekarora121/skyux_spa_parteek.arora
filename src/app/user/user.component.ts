@@ -46,7 +46,6 @@ export class UserComponent implements OnInit {
   public onSubmit() {
     this.user = new UserModel(this.myForm.value);
     this.userService.adduser(this.user);
-    console.log(this.userService.getUsers());
     this.router.navigate(['user-data-entry-grid']);
   }
   public onCancel() {

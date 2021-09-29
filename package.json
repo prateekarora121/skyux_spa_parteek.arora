@@ -58,6 +58,7 @@
     "@skyux/validation": "4.0.1",
     "ag-grid-angular": "^26.0.0",
     "ag-grid-community": "^26.0.0",
+    "istanbul-instrumenter-loader": "^3.0.1",
     "rxjs": "6.6.7",
     "zone.js": "0.10.3"
   },
