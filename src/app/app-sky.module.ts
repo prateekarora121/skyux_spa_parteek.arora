@@ -16,8 +16,8 @@ import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalModule } from '@skyux/modals';
 import { SkyNavbarModule } from '@skyux/navbar';
 import { SkyDropdownModule } from '@skyux/popovers';
-import { SkyDataEntryGridContextMenuComponent } from './user-data-entry-grid/data-entry-grid-context-menu.component';
-import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-entry-grid-edit-modal.component';
+import { SkyDataEntryGridContextMenuComponent } from './user-data-entry-grid/data-entry-grid-context-menu/data-entry-grid-context-menu.component';
+import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-entry-grid-edit-modal/data-entry-grid-edit-modal.component';
 
 @NgModule({
   declarations: [],

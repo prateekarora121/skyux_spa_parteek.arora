@@ -1,6 +1,6 @@
 <app-nav>
 </app-nav>
-<div *ngIf="display">
+<ng-container *ngIf="display">
   <sky-toolbar>
     <sky-toolbar-item>
       <button class="sky-btn sky-btn-primary"  id="add-btn" (click)="onAddUser()">
@@ -21,4 +21,4 @@
     <ag-grid-angular [gridOptions]="gridOptions" [rowData]="gridData">
     </ag-grid-angular>
   </sky-ag-grid-wrapper>
-</div>
+</ng-container>

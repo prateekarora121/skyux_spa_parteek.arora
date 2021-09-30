@@ -23,6 +23,11 @@ describe('User component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should initialize myform on ngoninit()', () => {
+    component.ngOnInit();
+    expect(component.myForm).not.toBeNull();
+  });
+
   it('should display all labels', () => {
     const firstNameLabel = fixture.nativeElement.querySelector('#firstNameLabel');
     const lastNameLabel = fixture.nativeElement.querySelector('#lastNameLabel');

@@ -4,9 +4,9 @@ import { SkyAgGridService, SkyCellType } from '@skyux/ag-grid';
 import { SkyModalCloseArgs, SkyModalService } from '@skyux/modals';
 import { GridApi, GridOptions, GridReadyEvent } from 'ag-grid-community';
 import { UserService } from '../shared/services/user.service';
-import { SkyDataEntryGridContextMenuComponent } from './data-entry-grid-context-menu.component';
-import { SkyDataEntryGridEditModalContext } from './data-entry-grid-edit-modal-context';
-import { SkyDataEntryGridEditModalComponent } from './data-entry-grid-edit-modal.component';
+import { SkyDataEntryGridContextMenuComponent } from './data-entry-grid-context-menu/data-entry-grid-context-menu.component';
+import { SkyDataEntryGridEditModalContext } from './data-entry-grid-edit-modal-context/data-entry-grid-edit-modal-context';
+import { SkyDataEntryGridEditModalComponent } from './data-entry-grid-edit-modal/data-entry-grid-edit-modal.component';
 
 @Component({
   selector: 'user-data-entry-grid',
@@ -60,7 +60,7 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
   public searchText: string;
 
   constructor(
-    private agGridService: SkyAgGridService,
+    public agGridService: SkyAgGridService,
     private modalService: SkyModalService,
     private userService: UserService,
     private router: Router

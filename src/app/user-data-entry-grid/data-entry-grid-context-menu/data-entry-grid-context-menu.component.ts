@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ICellRendererAngularComp } from 'ag-grid-angular';
 import { ICellRendererParams } from 'ag-grid-community';
-import { UserService } from '../shared/services/user.service';
+import { UserService } from '../../shared/services/user.service';
 
 @Component({
   selector: 'data-entry-grid-context-menu',
@@ -10,7 +10,7 @@ import { UserService } from '../shared/services/user.service';
 })
 export class SkyDataEntryGridContextMenuComponent
   implements ICellRendererAngularComp {
-  private params: ICellRendererParams;
+  public params: ICellRendererParams;
 
   constructor(private userService: UserService) {}
   public agInit(params: ICellRendererParams): void {
@@ -21,7 +21,7 @@ export class SkyDataEntryGridContextMenuComponent
     return false;
   }
   public actionClicked(action: any): void {
-    this.userService.removeUser(this.params.data.id);
+    this.userService.removeUser(this.params?.data.id);
     alert('User deleted Successfully');
   }
 }

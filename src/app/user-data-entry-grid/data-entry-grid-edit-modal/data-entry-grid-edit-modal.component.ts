@@ -7,8 +7,8 @@ import {
   GridOptions,
   GridReadyEvent
 } from 'ag-grid-community';
-import { UserModel } from '../model/user.model';
-import { SkyDataEntryGridEditModalContext } from './data-entry-grid-edit-modal-context';
+import { UserModel } from '../../model/user.model';
+import { SkyDataEntryGridEditModalContext } from '../data-entry-grid-edit-modal-context/data-entry-grid-edit-modal-context';
 
 @Component({
   selector: 'sky-demo-edit-modal-form',
