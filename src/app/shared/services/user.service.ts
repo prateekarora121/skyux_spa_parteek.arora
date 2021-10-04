@@ -5,7 +5,7 @@ import { UserModel } from '../../model/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-  public userList: UserModel[] = DemoData.DEMO_USERS;
+  public userList: UserModel[];
   public updatedUsers = new BehaviorSubject<boolean>(false);
 
   constructor() {
@@ -13,13 +13,8 @@ export class UserService {
   }
 
   public adduser(user: UserModel) {
-    let id = 0;
-    this.userList.forEach((x) => {
-      if (id < x.id) {
-        id = x.id;
-      }
-    });
-    user.id = id + 1;
+    let id = this.userList.length - 1;
+    user.id = this.userList[id].id + 1 ;
     this.userList.push(user);
     this.updatedUsers.next(true);
   }

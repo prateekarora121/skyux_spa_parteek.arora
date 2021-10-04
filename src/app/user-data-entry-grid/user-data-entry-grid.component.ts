@@ -65,6 +65,10 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
     private userService: UserService,
     private router: Router
   ) {
+
+  }
+
+  public ngOnInit(): void {
     this.userService.updatedUsers.subscribe((data) => {
       this.gridData = this.userService.getUsers();
       if (data) {
@@ -74,9 +78,6 @@ export class SkyDataEntryGridDemoComponent implements OnInit {
         this.display = true;
       }, 0);
     });
-  }
-
-  public ngOnInit(): void {
     this.gridOptions = {
       columnDefs: this.columnDefs,
       onGridReady: (gridReadyEvent) => this.onGridReady(gridReadyEvent)
