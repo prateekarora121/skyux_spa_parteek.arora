@@ -6,7 +6,7 @@ import { SkyAvatarModule } from '@skyux/avatar';
 import { SkyIdModule } from '@skyux/core';
 import { SkyDatepickerModule } from '@skyux/datetime';
 import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyAlertModule, SkyKeyInfoModule } from '@skyux/indicators';
+import { SkyAlertModule, SkyKeyInfoModule, SkyStatusIndicatorModule } from '@skyux/indicators';
 import {
   SkyCardModule,
   SkyFluidGridModule,
@@ -15,6 +15,7 @@ import {
 import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalModule } from '@skyux/modals';
 import { SkyNavbarModule } from '@skyux/navbar';
+import { SkyPhoneFieldModule } from '@skyux/phone-field';
 import { SkyDropdownModule } from '@skyux/popovers';
 import { SkyDataEntryGridContextMenuComponent } from './user-data-entry-grid/data-entry-grid-context-menu/data-entry-grid-context-menu.component';
 import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-entry-grid-edit-modal/data-entry-grid-edit-modal.component';
@@ -39,7 +40,9 @@ import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-
     SkyFluidGridModule,
     SkyModalModule,
     SkyToolbarModule,
-    SkySearchModule
+    SkySearchModule,
+    SkyPhoneFieldModule,
+    SkyStatusIndicatorModule
   ],
   entryComponents: [
     SkyDataEntryGridContextMenuComponent,

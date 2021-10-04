@@ -20,20 +20,36 @@
     <label for="basic-input-with-label-example" id="numberLabel" class="sky-control-label">
       Phone number
     </label>
-    <input formControlName="number"
-    class="sky-form-control" id="number" type="text" >
+    <sky-input-box id="number">
+      <sky-phone-field
+        [defaultCountry]="'phone-format' | skyAppResources"
+      >
+        <input
+          formControlName="number"
+          skyPhoneFieldInput
+        >
+      </sky-phone-field>
+    </sky-input-box>
+    <sky-status-indicator *ngIf="!phoneControl.valid"
+    descriptionType="none"
+  >
+    Enter a phone number matching the format for the selected country.
+  </sky-status-indicator>
+
+
+
   <sky-input-box>
     <label
       class="sky-control-label dobLabel"
       [for]="dateInput.id"
     >
-      Date
+      DOB
     </label>
     <sky-datepicker
     id="dob1"
     >
       <input
-      class="dob"
+      class="dob dob"
         formControlName="dob"
         skyDatepickerInput
         skyId
@@ -42,6 +58,9 @@
       />
     </sky-datepicker>
   </sky-input-box>
+  <ng-container  *ngIf="!DOBControl.valid && DOBControl.touched">
+  <div class="sky-error-label">Date format should be 'MM/DD/YYYY' and should not be future date </div>
+  </ng-container>
 
 
 
