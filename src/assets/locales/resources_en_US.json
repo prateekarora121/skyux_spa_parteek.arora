@@ -11,8 +11,16 @@
     "message": "Home",
     "_description": "The text for the Home top-level navigation item"
   },
-  "home_title": {
+  "User Grid": {
+    "message": "User Grid",
+    "_description": "The text for the Home top-level navigation item"
+  },
+  "user-data-entry-grid": {
     "message": "SKY UX Template",
     "_description": "Title for the home component"
+  },
+  "phone-format": {
+    "message": "in",
+    "_description": "country selet for phone no"
   }
 }

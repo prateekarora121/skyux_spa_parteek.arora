@@ -1,51 +1,27 @@
 import { CommonModule } from '@angular/common';
-import {
-  NgModule
-} from '@angular/core';
-import { FormsModule } from '@angular/forms';
-
-import {
-  ReactiveFormsModule
-} from '@angular/forms';
-
-import {
-  SkyDatepickerModule
-} from '@skyux/datetime';
-import {
-  SkyAvatarModule
-} from '@skyux/avatar';
-
-import {
-  SkyAlertModule,
-  SkyKeyInfoModule
-} from '@skyux/indicators';
-
+import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SkyAgGridModule } from '@skyux/ag-grid';
+import { SkyAvatarModule } from '@skyux/avatar';
+import { SkyIdModule } from '@skyux/core';
+import { SkyDatepickerModule } from '@skyux/datetime';
+import { SkyInputBoxModule } from '@skyux/forms';
+import { SkyAlertModule, SkyKeyInfoModule, SkyStatusIndicatorModule } from '@skyux/indicators';
 import {
   SkyCardModule,
   SkyFluidGridModule,
   SkyToolbarModule
 } from '@skyux/layout';
-
-import {
-  SkyNavbarModule
-} from '@skyux/navbar';
-
-import {
-  SkyIdModule
-} from '@skyux/core';
-import { SkyInputBoxModule } from '@skyux/forms';
-import { SkyDropdownModule } from '@skyux/popovers';
-import { SkyAgGridModule } from '@skyux/ag-grid';
+import { SkySearchModule } from '@skyux/lookup';
 import { SkyModalModule } from '@skyux/modals';
-import {
-  SkySearchModule
-} from '@skyux/lookup';
-import { SkyDataEntryGridContextMenuComponent } from './user-data-entry-grid/data-entry-grid-context-menu.component';
-import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-entry-grid-edit-modal.component';
+import { SkyNavbarModule } from '@skyux/navbar';
+import { SkyPhoneFieldModule } from '@skyux/phone-field';
+import { SkyDropdownModule } from '@skyux/popovers';
+import { SkyDataEntryGridContextMenuComponent } from './user-data-entry-grid/data-entry-grid-context-menu/data-entry-grid-context-menu.component';
+import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-entry-grid-edit-modal/data-entry-grid-edit-modal.component';
 
 @NgModule({
-  declarations:[
-  ],
+  declarations: [],
   exports: [
     CommonModule,
     FormsModule,
@@ -64,11 +40,13 @@ import { SkyDataEntryGridEditModalComponent } from './user-data-entry-grid/data-
     SkyFluidGridModule,
     SkyModalModule,
     SkyToolbarModule,
-    SkySearchModule
+    SkySearchModule,
+    SkyPhoneFieldModule,
+    SkyStatusIndicatorModule
   ],
   entryComponents: [
     SkyDataEntryGridContextMenuComponent,
     SkyDataEntryGridEditModalComponent
   ]
 })
-export class AppSkyModule { }
+export class AppSkyModule {}

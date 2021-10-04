@@ -1,13 +1,12 @@
-export class UserModel
-{
-  id:number;
-  firstName:string;
-  lastName:string;
-  number:string;
-  dob:Date;
-  email:string;
-  address:string;
+export class UserModel {
+  public id: number;
+  public firstName: string;
+  public lastName: string;
+  public number: string;
+  public dob: Date;
+  public email: string;
+  public address: string;
   public constructor(init?: Partial<UserModel>) {
     Object.assign(this, init);
-}
+  }
 }

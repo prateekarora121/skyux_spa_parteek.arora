@@ -1,17 +1,21 @@
-.form-style
-{
+.form-style {
   width: 30%;
-margin-left: 34%;
-margin-top: 4%
+  margin-left: 34%;
+  margin-top: 4%;
 }
 
-.submit-btn
-{
-margin-top: 4%;
+.submit-btn {
+  margin-top: 4%;
 }
 
-label
-{
+label {
   margin-top: 3%;
   margin-bottom: 3%;
+}
+.phone-field-demo {
+  width: 50%;
+
+  &.ng-valid ::ng-deep .sky-phone-field {
+    margin-bottom: 0;
+  }
 }
